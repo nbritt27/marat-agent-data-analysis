@@ -23,7 +23,7 @@ Much of the schema and implementation comes from [this project](https://github.c
 
 ## Installation
 ### Docker
-The easiest way to install and get started is through Docker. You can either pull the pre-built image yourself or build the image locally. 
+The easiest way to install and get started is through Docker. You can either pull the pre-built image or build the image locally. 
 
 **Pull the Docker image from DockerHub**
 
