@@ -1,0 +1,93 @@
+/* Chat.css */
+
+.chat-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    position: relative; /* Make sure the container is positioned relative */
+    width: 1600px;
+    max-width: 100%; /* Ensure it fits within the page */
+    height:1000px;
+    overflow: auto; /* Allow the grid to be scrollable if needed */
+  }
+  .file_upload{
+    width:400px;
+    border: none;
+  }
+  .chat-card::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+  .react-flow__node-default {
+    visibility: visible;
+}
+  .flowParent{
+    width: 2500px;
+    height: 1000px;
+  }
+  .chat-card {
+    -ms-overflow-style: none; /* Hide scrollbar in Internet Explorer and Edge */
+    scrollbar-width: none; /* For Firefox */
+
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    height:100%;
+    justify-content: flex-start; /* Ensure content starts at the top */
+  }
+  
+
+
+  .user-message {
+    background-color: #daf7a6;
+  }
+
+  
+  .chat-content {
+    margin: 0;
+    flex-grow: 1;
+  }
+  
+  .plotly-container {
+    width: 100%;
+    height: auto;
+  }
+  
+  form {
+    border:none;
+    width: 100%;
+  }
+  
+  input[type="text"], input[type="file"] {
+    padding: 10px;
+    font-size: 16px;
+    border:none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    border-radius: 25px;
+  }
+  
+  button[type="submit"] {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-left: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 25px;
+    cursor: pointer;
+  }
+  ::placeholder{
+    -webkit-text-stroke-color: rgb(219, 219, 219);
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+  

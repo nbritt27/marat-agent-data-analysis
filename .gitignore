@@ -1,22 +1,28 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
+#python
+**/__pycache__
 # dependencies
-/node_modules
-/.pnp
+**/node_modules
+*/.pnp
 .pnp.js
 
 # testing
 /coverage
+**/.vs
+**/.vscode
+# outputs
+*/temp_outputs
+*/uploads
 
 # next.js
-/.next/
-/out/
-
+*/.next/
+*/out/
 # production
-/build
+*/build
 
 # misc
-.DS_Store
+*.DS_Store
 *.pem
 
 # debug
@@ -27,6 +33,9 @@ yarn-error.log*
 # local env files
 .env*.local
 .env
+*/config.yaml
+**/secrets.dev.yaml
+**/values.dev.yaml
 
 # vercel
 .vercel

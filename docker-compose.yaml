@@ -1,0 +1,27 @@
+
+services:
+  frontend:
+    build:
+      context: ./nextjs
+      dockerfile: Dockerfile
+    volumes:
+      - ./nextjs:/usr/src/app
+      - /usr/src/app/node_modules  # Ensures node_modules is not overridden by the host
+    environment:
+      - NODE_ENV=development
+    working_dir: /usr/src/app
+    command: pnpm run next-dev
+    ports:
+      - "3000:3000"
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    volumes:
+      - ./backend:/app
+    environment:
+      - PYTHONPATH=/app/api
+    working_dir: /app
+    command: uvicorn api.test:app --host 0.0.0.0 --port 8000
+    ports:
+      - "8000:8000"
