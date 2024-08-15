@@ -2,7 +2,7 @@
 
 ![Image](./sample_output.png)
 
-Marat is a data analysis and visualization tool using a NextJS flowchart-style frontend to visualize and coordinate data analysis through python-based Langgraph agents. Simply upload your CSV file into when prompted, and as specific questions (i.e. Generate a linear regression between size and cost) or a broad question (i.e. Tell me everything, What contributes to changes in price, etc.). 
+Marat ("muh-RAH") is a data analysis and visualization tool using a NextJS flowchart-style frontend to visualize and coordinate data analysis through python-based Langgraph agents. Simply upload your CSV file into when prompted, and as specific questions (i.e. Generate a linear regression between size and cost) or a broad question (i.e. Tell me everything, What contributes to changes in price, etc.). 
 
 ## Features
 - **Broad range of analysis options**: Regression analyses, plotly visualizations, cluster analyses, etc.
