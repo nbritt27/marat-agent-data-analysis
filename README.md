@@ -2,7 +2,14 @@
 
 ![Image](./sample_output.png)
 
-Marat ("muh-RAH") is a data analysis and visualization tool using a NextJS flowchart-style frontend to visualize and coordinate data analysis through python-based Langgraph agents. 
+## What
+Marat ("muh-RAH") is a data analysis and visualization tool that facilitates exploratory data analysis, from general AI-driven thematic insights to specific analysis or visualization requests by the user.
+
+## Why
+Current data analysis implementations leveraging conversational AI are primarily interrogative, with the user chatting with a personified version of the data. While this is quite useful, I believe it does not maximize AI's benefit in understanding data. We tend not to view insights and information as separate elements interacted with in a dialectic, but rather as a network of understanding, with insights linking together to form a complete understanding of data insights. This project represents a proof-of-concept attempt to better implement this view of analysis. 
+
+## How
+Marat uses a NextJS flowchart-style frontend to visualize and coordinate data analysis through Python-basedLanggraph agents. FastAPI is used to send information to the Python base, where analysis is then conducted and sent back to the NextJS frontend to be visualized and organized. 
 
 ## Sample Use Case
 Go to the main dashboard page (localhost:3000/dashboard) and upload your CSV data file when prompted. When the question prompt appears, you can either ask a specific question (i.e. Generate a linear regression between size and cost) or a broad question (i.e. Tell me everything, What contributes to changes in price, etc.). To generate a report, select the nodes you wish to include and click "Generate Report from Selected Nodes". The report will then be generated as a PDF and can be downloaded through the /reports page. 
@@ -17,11 +24,11 @@ Go to the main dashboard page (localhost:3000/dashboard) and upload your CSV dat
 ## File Structure
 All frontend NextJS code is located in the 'nextjs' folder. Presently, typescript is not set in script mode, but I am planning on updating this once all type configurations are fully added.
 
-The langgraph and agent configurations can be found in the backend folder, with the agent definitions and graph configuration found in backend->api->agents->[agents.py](backend/api/agents/agents.py) and backend->api->agent_graph->[graph.py](backend/api/agent_graph/graph.py) respectively. 
+The Langgraph and agent configurations can be found in the backend folder, with the agent definitions and graph configuration found in backend->api->agents->[agents.py](backend/api/agents/agents.py) and backend->api->agent_graph->[graph.py](backend/api/agent_graph/graph.py) respectively. 
 FastAPI backend setup is in backend->api->[test.py](backend/api/test.py), with the coordination of the langgraph responses being found in langchain_base->langchain.py. 
 Model configurations can be found in the backend->api->[models](backend/api/models/) directory. All prompts are located in backend->api->prompts->[prompts.py](backend/api/prompts/prompts.py)
 
-Much of the schema and implementation comes from [this project](https://github.com/john-adeojo/graph_websearch_agent/tree/main), which also features some great learning material. 
+Much of the schema and implementation comes from [this project](https://github.com/john-adeojo/graph_websearch_agent/tree/main), which also features some excellent learning material. 
 
 
 ## Installation
